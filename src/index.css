@@ -259,6 +259,62 @@ input, textarea, select {
   animation: spinSlow 30s linear infinite;
 }
 
+/* Cinematic Sun Logo Animations */
+@keyframes cinematicRaysRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cinematicOrbitCounter {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes cinematicCoronaPulse {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+.cinematic-sun-rays {
+  animation: cinematicRaysRotate 36s linear infinite;
+}
+
+.cinematic-sun-orbit {
+  animation: cinematicOrbitCounter 24s linear infinite;
+}
+
+.cinematic-sun-corona {
+  animation: cinematicCoronaPulse 4s ease-in-out infinite;
+  transform-origin: 50px 50px;
+}
+
+.cinematic-sun-wrapper {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.cinematic-sun-wrapper:hover {
+  transform: scale(1.08) rotate(4deg);
+  filter: drop-shadow(0 6px 24px rgba(255, 107, 0, 0.6)) drop-shadow(0 0 35px rgba(255, 184, 0, 0.55)) !important;
+}
+
+.cinematic-sun-wrapper:hover .cinematic-sun-rays {
+  animation-duration: 16s;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;

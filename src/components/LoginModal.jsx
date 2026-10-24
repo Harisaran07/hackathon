@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { X, Lock, Mail, User, ArrowRight, Sun, CheckCircle } from 'lucide-react';
+import { CinematicSunLogo } from './CinematicSunLogo';
 import { useCart } from '../context/CartContext';
 
 export const LoginModal = () => {
@@ -106,20 +107,8 @@ export const LoginModal = () => {
         ) : (
           <div>
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-              <div
-                style={{
-                  width: '46px',
-                  height: '46px',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #FF6B00 0%, #FFB800 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#FFFFFF',
-                  margin: '0 auto 12px'
-                }}
-              >
-                <Sun size={26} />
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '14px' }}>
+                <CinematicSunLogo size={52} />
               </div>
 
               <h3 style={{ fontSize: '1.7rem', fontWeight: 900, color: 'var(--color-forest-dark)' }}>

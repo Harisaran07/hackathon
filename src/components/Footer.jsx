@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sun, Mail, ArrowRight, Shield, Leaf, Heart, CheckCircle2 } from 'lucide-react';
+import { CinematicSunLogo } from './CinematicSunLogo';
 import { InstagramIcon, TwitterIcon, YoutubeIcon } from './SocialIcons';
 import confetti from 'canvas-confetti';
 
@@ -67,22 +68,8 @@ export const Footer = () => {
         >
           {/* Column 1: Brand Info */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #FF6B00 0%, #FFB800 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#FFFFFF',
-                  boxShadow: '0 4px 14px rgba(255, 107, 0, 0.4)'
-                }}
-              >
-                <Sun size={24} />
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <CinematicSunLogo size={44} />
               <div>
                 <div
                   style={{

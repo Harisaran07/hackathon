@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Droplets, Sparkles, Wind, Play, Plus, Check, ArrowRight } from 'lucide-react';
+import { Droplets, Sparkles, Wind, Plus, Check, ArrowRight } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { JUICE_PRODUCTS } from '../data/juiceData';
 
@@ -175,23 +175,14 @@ export const JuiceSplashShowcase = () => {
             style={{
               fontSize: 'clamp(2.4rem, 4.4vw, 3.8rem)',
               fontWeight: 900,
-              color: '#FFFFFF',
-              lineHeight: 1.1,
+              lineHeight: 1.15,
               letterSpacing: '-0.02em',
-              marginBottom: '16px'
+              marginBottom: '16px',
+              color: activeSplash.color,
+              transition: 'color 0.4s ease'
             }}
           >
-            NATURE’S LIQUID ENERGY, <br />
-            <span
-              style={{
-                background: `linear-gradient(135deg, ${activeSplash.accent} 0%, #FFFFFF 100%)`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                transition: 'all 0.6s ease'
-              }}
-            >
-              CAPTURED IN MOTION.
-            </span>
+            NATURE’S LIQUID ENERGY
           </h2>
 
           <p
@@ -385,7 +376,6 @@ export const JuiceSplashShowcase = () => {
                 e.currentTarget.style.background = 'rgba(0, 0, 0, 0.65)';
               }}
             >
-              <Play size={14} fill="#FFFFFF" />
               <span>{isPouring ? 'Splashing...' : 'Simulate Splash'}</span>
             </button>
           </div>

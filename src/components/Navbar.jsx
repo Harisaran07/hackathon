@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, User, Menu, X, Sun, Sparkles, ArrowRight } from 'lucide-react';
+import { CinematicSunLogo } from './CinematicSunLogo';
 import { useCart } from '../context/CartContext';
 
 export const Navbar = () => {
@@ -109,22 +110,7 @@ export const Navbar = () => {
               flexShrink: 0
             }}
           >
-            <div
-              style={{
-                width: '46px',
-                height: '46px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #FF6B00 0%, #FFB800 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 6px 20px rgba(255, 107, 0, 0.35)',
-                color: '#FFFFFF',
-                flexShrink: 0
-              }}
-            >
-              <Sun size={26} />
-            </div>
+            <CinematicSunLogo size={46} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
               <div
                 style={{
